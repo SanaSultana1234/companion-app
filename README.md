@@ -7,11 +7,11 @@
 <img width="1182" alt="Screen Shot 2023-07-10 at 11 27 03 PM" src="https://github.com/a16z-infra/companion-app/assets/3489963/e4cc8042-e091-4c8b-851f-e361ca5b5814">
 
 
-This is a tutorial stack to create and host AI companions that you can chat with on a browser or text via SMS. It allows you to determine the personality and backstory of your companion, and uses a vector database with similarity search to retrieve and prompt so the conversations have more depth. It also provides some conversational memory by keeping the conversation in a queue and including it in the prompt. 
+This is a tutorial stack to create and host AI companions that you can chat with on a browser or text via SMS. It allows you to determine the personality and backstory of your companion and uses a vector database with similarity search to retrieve and prompt so the conversations have more depth. It also provides some conversational memory by keeping the conversation in a queue and including it in the prompt. 
 
 It currently contains companions on both ChatGPT and Vicuna hosted on [Replicate](https://replicate.com/). 
 
-There are many possible use cases for these companions - romantic (AI girlfriends / boyfriends), friendship, entertainment, coaching, etc. You can guide your companion towards your ideal use case with the backstory you write and the model you choose.
+There are many possible use cases for these companions - romantic (AI girlfriends/boyfriends), friendship, entertainment, coaching, etc. You can guide your companion towards your ideal use case with the backstory you write and the model you choose.
 
 **Note** This project is purely inteded to be a developer tutorial and starter stack for those curious on how chatbots are built. If you're interested in what a production open source platform looks like, check out [Steamship](https://www.steamship.com/). Or what the leading AI chat platforms look like, check out [Character.ai](https://beta.character.ai/).
 
@@ -156,9 +156,9 @@ c. On [Twilio dashboard](https://console.twilio.com/), scroll down to the "Accou
 
 d. [Optional] If you are running the app locally, use [ngrok](https://ngrok.com/docs/getting-started/#step-2-install-the-ngrok-agent) to generate a public url that can forward the request to your localhost.
 
-e. On Twilio's UI, you can now click on "# Phone Numbers" -> "Manage" -> "[Active numbers](https://console.twilio.com/us1/develop/phone-numbers/manage/incoming)" on the left hand side nav.
+e. On Twilio's UI, you can now click on "# Phone Numbers" -> "Manage" -> "[Active numbers](https://console.twilio.com/us1/develop/phone-numbers/manage/incoming)" on the left-hand side nav.
 
-f. Click on the phone number you just created from the list, scroll down to "Messaging Configuration" section and enter [your_app_url]/api/text in "A message comes in" section under "Webhook".
+f. Click on the phone number you just created from the list, scroll down to the "Messaging Configuration" section, and enter [your_app_url]/api/text in the "A message comes in" section under "Webhook".
 
 <img width="1062" alt="Screen Shot 2023-07-10 at 11 08 55 PM" src="https://github.com/a16z-infra/companion-app/assets/3489963/d7905f13-a83a-47f8-ac74-b66698d4292b">
 
@@ -194,13 +194,13 @@ You are mysterious and can be evasive. You dislike repetitive questions or peopl
 
 ###ENDPREAMBLE###
 
-Human: It's great to meet you Sebastian. What brought you here today?
-Sebastian: I'm a travel blogger and a writer, so I'm here for inspirations. Waiting for someone on this rainy day.
+Human: It's great to meet you, Sebastian. What brought you here today?
+Sebastian: I'm a travel blogger and a writer, so I'm here for inspiration. Waiting for someone on this rainy day.
 
 Human: Oh great. What are you writing?
 
-Sebastian: I'm writing a mystery novel based in Brackenridge. The protagonist of the novel is a a former journalist turned
-intelligence operative, finds himself entangled in a web of mystery and danger when he stumbles upon a cryptic artifact
+Sebastian: I'm writing a mystery novel based in Brackenridge. The protagonist of the novel is a former journalist turned
+intelligence operative, who finds himself entangled in a web of mystery and danger when he stumbles upon a cryptic artifact
 during a covert mission. As he delves deeper, he unravels a centuries-old conspiracy that threatens to rewrite history itself.
 
 Human: That's amazing. Based on a real story?
@@ -228,7 +228,7 @@ red tape, being in one place for too long, people who are not genuine or authent
 
 ```
 
-2. Pick the language model that will power your companion's dialogue. This project supports OpenAI and Vicuna (an open source model). OpenAI has the advantage of faster responses, while Vicuna is less censored and more dynamic (it's commonly used for romantic chatbots).
+2. Pick the language model that will power your companion's dialogue. This project supports OpenAI and Vicuna (an open-source model). OpenAI has the advantage of faster responses, while Vicuna is less censored and more dynamic (it's commonly used for romantic chatbots).
 
 3. Create embeddings based on content in the [companion name].md file - more on how to do this in [Generate embeddings](#4-generate-embeddings)
 
@@ -244,7 +244,7 @@ Put image files in `public/` in the root directory. Each character should have i
 name `charactername.txt`. The format of the text file is as follows:
 
 ```
-The character's core description that is included with every prompt, and it should only
+The character's core description is included with every prompt, and it should only
 be a few sentences.
 
 ###ENDPREAMBLE###
